@@ -1,14 +1,28 @@
-import styles from "./index.module.scss"
-import NavBar from './components/NavBar';
+// import styles from "./index.module.scss"
+import React from "react"
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Card from "./components/Card";
+import data from "./data"
+import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
+  const card = data.map(val => {
+    return <Card
+      key={val.id}
+      {...val}
+    />
+  })
   return (
     <div>
-      <NavBar />,
+      <Navbar />
       <Hero />
+      <section className="cards--list">
+        {card}
+      </section>
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
