@@ -1,63 +1,116 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
-}
-nav {
-  height: 70px;
-  width: auto;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  padding: 20px 36px;
+  font-family: "Poppins", sans-serif;
 }
 
-.airnbnb-logo {
-  max-width: 100px;
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: #918e9b;
+}
+
+nav {
+  height: 72px;
+  display: flex;
+  padding: 20px 40px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  width: auto;
+}
+
+section {
+  padding: 30px;
 }
 
 .hero {
-  margin: 40px;
-  padding: 20px;
-  font-family: Poppins;
-  text-align: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
-.heroTitle {
-  margin-top: 28px;
+
+.hero-photo {
+  align-self: center;
+  width: 72%;
+}
+
+.hero-header {
   margin-bottom: 16px;
-  line-height: 40px;
+  padding-left: 35px;
+  letter-spacing: 1px;
+  font-size: 35px;
 }
+
 .hero-text {
-  margin: 8px;
-  font-weight: 300;
+  margin-top: 0;
+  padding-left: 35px;
+  letter-spacing: 1px;
+  font-size: 20px;
 }
 
-card {
-  width: 175px;
+.cards-list {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 150px;
   font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  position: relative;
 }
 
-.cardImage {
+.card-image {
   width: 100%;
   border-radius: 9px;
+  margin-bottom: 10px;
+  height: 370px;
 }
 
-.cardStats {
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.card-stats {
   display: flex;
   align-items: center;
+}
+
+.card-star {
+  height: 18px;
+}
+
+.cardPrice {
+  margin-top: auto;
+  font-size: 13px;
+}
+
+.card-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.651);
 }

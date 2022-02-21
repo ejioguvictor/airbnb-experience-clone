@@ -1,4 +1,6 @@
 import React from "react"
+import styles from "../index.module.scss"
+
 
 
 const Card = (props) => {
@@ -11,20 +13,20 @@ const Card = (props) => {
     }
 
     return (
-        <div className="card">
+        <div className={styles.card}>
             {
-                badgeText && 
-                <div className="card--badge">{badgeText}</div>
+                badgeText &&
+                <div className={styles["card-badge"]}>{badgeText}</div>
             }
-            <img src={`../images/${props.coverImg}`} className="card--image" />
-            <div className="card--stats">
-                <img src="../images/star.png" className="card--star" />
+            <img src={`../images/${props.coverImg}`} className={styles["card-image"]} alt="" />
+            <div className={styles["card-stats"]}>
+                <img src="../images/star.png" className={styles["card-star"]} alt="" />
                 <span>{props.stats.rating}</span>
-                <span className="gray">({props.stats.reviewCount}) •  </span>
-                <span className="gray">{props.location}</span>
+                <span className={styles.gray}>({props.stats.reviewCount}) •  </span>
+                <span className={styles.gray}>{props.location}</span>
             </div>
-            <p className="card--title">{props.title}</p>
-            <p><span className="bold card--price">From ${props.price}</span> / person</p>
+            <p className={styles["card-title"]}>{props.title}</p>
+            <p><span className={styles["bold cardPrice"]}>From ${props.price}</span> / person</p>
         </div>
     )
 }

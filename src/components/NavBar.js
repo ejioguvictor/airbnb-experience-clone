@@ -1,10 +1,11 @@
 import React from "react"
 import logo from "../images/Vector.png"
+import styles from "../index.module.scss"
 
 const Navbar = () => {
     return (
-        <nav className="nav">
-            <img src={logo} alt="Brand-logo"/>
+        <nav className={styles.nav}>
+            <img src={logo} alt="Brand-logo" />
         </nav>
     )
 }

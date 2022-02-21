@@ -1,4 +1,4 @@
-// import styles from "./index.module.scss"
+import styles from "./index.module.scss"
 import React from "react"
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -17,7 +17,7 @@ const App = () => {
     <div>
       <Navbar />
       <Hero />
-      <section className="cards--list">
+      <section className={styles["cards-list"]}>
         {card}
       </section>
       <Footer />
